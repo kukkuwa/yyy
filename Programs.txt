@@ -1,0 +1,381 @@
+
+*************pass,fail************
+
+#include <stdio.h>
+int main(){
+	int marks;
+	printf ("Enter your marks");
+	scanf("%d" , &marks);
+	if (marks<=100 && marks >= 60){
+		printf("passed");
+	}
+	else if (marks >100){
+		printf ("invalide marks");
+	}
+	else{
+		printf("failed");
+	}
+return 0;
+}
+
+
+
+
+#include<stdio.h>
+int main(){
+	int number ;
+	printf("Enter a number");
+	scanf("%d",&number);
+	if (number==10){
+		printf("number is equals to 10");
+	}
+	else if (number==50){
+		printf("number is equals to 50");
+	}
+	else if (number==100){
+		printf("number is equals to 100");
+	}
+	else{
+		printf("number is not equals to 10,50 or 100");
+	}
+return 0;
+}
+
+
+
+
+**************Electrecity bill***************
+
+#include<stdio.h>
+int main(){
+	const float rate1 = 0.50;
+	const float rate2 = 0.75;
+	const float rate3 = 1.20;
+	const float rate4 = 1.50;
+	int units;
+	float bill;
+	printf ("Enter the units you used");
+	scanf("%d",&units);
+	
+	if (units<=50 && units>=0){
+		bill = rate1*units;
+		printf("your electricity bill is (units*0.50) =%.2f\n",bill);
+	}
+	else if (units<=150 && units>50){
+		bill = rate2*units;
+		printf("your electricity bill is (units*0.75) =%.2f\n",bill);
+	}
+	else if (units<=250 && units>150){
+		bill = rate3*units;
+		printf("your electricity bill is (units*1.20) =%.2f\n",bill);
+	}
+	else if(units>=250){
+		bill = rate4*units;
+		printf("your electricity bill is (units*1.50) =%.2f\n",bill);
+	}
+	else{
+		printf("Invalide input");
+	}
+return 0;
+}
+
+
+
+
+**********psitive,negative number**************
+
+#include<stdio.h>
+int main(){
+	int number;
+	printf("Enter a number");
+	scanf("%d",&number);
+	
+	if (number>0){
+		printf("the number is a positive number");
+	}
+	else if (number<0){
+		printf("the number is a negetive number");
+	}
+	else {
+		printf("the number is zero");
+	}
+return 0;
+}
+
+
+
+
+
+
+
+
+
+**********tax***********
+
+#include<stdio.h>
+int main(){
+	int age=55;
+	float income = 50000.0; 
+	if(age>= 60){
+		if(income< 60000.0){
+			printf("You are eligible for a tax deduction.");
+		}
+		else{
+			printf("You are not eligible for a tax deduction");
+		}
+	}
+	else{
+		printf("You are not eligible for a tax deduction");
+	}
+}
+
+
+
+
+
+
+*************max value***********
+
+#include<stdio.h>
+int main(){
+	int input1,input2,input3;
+	printf("Enter three values");
+	scanf("%d""%d""%d",&input1,&input2,&input3);
+	if(input1 > input3 ){
+		if(input1> input2){
+			printf("max value is %d\n",input1);
+		}
+		else {
+			printf("max value is %d\n",input2);
+			}
+	}
+		else {
+		if(input2> input3){
+			printf("max value is %d\n",input2);
+		}
+		else {
+			printf("max value is %d\n",input3);
+		}
+	}
+return 0;	
+}
+
+
+
+
+************days of week*************
+
+#include<stdio.h>
+int main(){
+	int dayofweek;
+	printf("Enter a number between 1-7\n");
+	scanf("%d",&dayofweek);
+	switch(dayofweek){
+		case 1:
+		printf("Monday");
+		break;
+		case 2:
+		printf("Tuesday");
+		break;
+		case 3:
+		printf("Wednesday");
+		break;
+		case 4:
+		printf("Thursday");
+		break;
+		case 5:
+		printf("Friday");
+		break;
+		case 6:
+		printf("Saturday");
+		break;
+		case 7:
+		printf("Sunday");
+		break;
+		default:
+		printf("Enter Number Between 1 - 7 ");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+************alphebet************
+
+#include<stdio.h>
+int main(){
+	char start = 'a';
+	char end = 'z';
+	printf("Alphabet from %c to %c :", start, end);
+	for (char ch=start;ch<=end ; ch++){
+		printf("%c  ",ch);
+	}
+	printf("\n Alphabet from %c to %c :", end, start);
+	for (char ch=end;ch>=start ; ch--){
+		printf("%c  ",ch);
+	}
+return 0;
+}
+
+
+
+
+
+
+
+
+************odd even************
+
+#include<stdio.h>
+int main(){
+	int number=1;
+	printf("Odd numbers between 1 and 100 \n");
+	while(number <=100){
+		printf("%d , ",number);
+		number += 2 ;
+	}
+	int number2=0;
+	printf("\n Even numbers between 0 and 50 \n");
+	while(number2 <= 50){
+		printf("%d , ",number2);
+		number2 += 2 ;
+	}
+return 0;
+}
+
+
+
+
+
+
+****************natural number***************
+#include<stdio.h>
+int main(){
+	int number = 1;
+	printf("Natural numbers from 1 to 10\n");
+	
+	do {
+		printf(" %d " , number);
+		number ++;
+		} while (number<10);
+	
+return 0;
+}
+
+
+
+
+
+
+
+
+
+************loop*************
+
+#include<stdio.h>
+int main(){
+	int user_input;
+	printf("Enter a number, Enter Negative number to exit the loop\n" );
+	while (1){
+		printf("\n Enter a number: \n" );
+		scanf("%d" ,&user_input);
+		if (user_input < 0){
+		printf("Exiting the loop");
+		break;
+		}
+		printf("%d Entered", user_input);
+	}
+return 0;
+}
+
+
+
+#include<stdio.h>
+int main(){
+	for (int i =1 ; i < 20 ; i ++){
+		if (i % 2 != 0){
+			continue;
+		}
+		printf ("%d ", i);
+		
+	}
+}
+
+
+
+
+
+**************circle***********
+
+#include <stdio.h>
+
+int main() {
+    float radius, diameter, circumference, area;
+    const float pi = 22.0 / 7.0; // Approximate value of pi
+
+    // Input radius from the user
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // Calculate diameter, circumference, and area
+    diameter = 2 * radius;
+    circumference = 2 * pi * radius;
+    area = pi * radius * radius;
+
+    // Display the results
+    printf("Diameter of the circle: %.2f\n", diameter);
+    printf("Circumference of the circle: %.2f\n", circumference);
+    printf("Area of the circle: %.2f\n", area);
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+*****************decimal to binary**************
+#include <stdio.h>
+
+void decimalToBinary(int decimalNumber) {
+    if (decimalNumber == 0) {
+        printf("Binary equivalent: 0\n");
+        return;
+    }
+
+    int binaryNumber = 0;
+    int remainder, place = 1;
+
+    while (decimalNumber > 0) {
+        remainder = decimalNumber % 2;
+        binaryNumber = binaryNumber + remainder * place;
+        place *= 10;
+        decimalNumber /= 2;
+    }
+
+    printf("Binary equivalent: %d\n", binaryNumber);
+}
+
+int main() {
+    int decimalNumber;
+
+    // Input decimal number from the user
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimalNumber);
+
+    // Call the function to convert to binary and print the result
+    decimalToBinary(decimalNumber);
+
+return 0;
+}
+
